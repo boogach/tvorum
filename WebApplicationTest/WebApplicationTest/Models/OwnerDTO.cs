@@ -9,8 +9,9 @@ namespace WebApplicationTest.Models
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public List<Ferret> FerretName { get; set; }
+        public List<Ferret> Ferrets { get; set; }
     }
+
 
     public class OwnerDetailsDTO
     {

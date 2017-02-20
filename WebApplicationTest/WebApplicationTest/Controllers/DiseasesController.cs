@@ -30,7 +30,7 @@ namespace WebApplicationTest.Controllers
             return diseases;
         }
 
-        [Route("api/diseases/{diseaseName}")]
+        [Route("api/diseases/{diseaseName}/ferrets")]
         public IEnumerable<DiseaseDTO> GetDiseaseByName(string diseaseName)
         {
             var dis = from o in db.Diseases

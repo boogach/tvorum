@@ -25,7 +25,7 @@ namespace WebApplicationTest.Controllers
                          {
                              Id = o.ID,
                              FullName = o.FristName + " " + o.LastName,
-                             FerretName = o.Ferrets.Where(x => x.OwnerID == o.ID).ToList()
+                             Ferrets = o.Ferrets.Where(x => x.OwnerID == o.ID).ToList()
                          };
             return owners;
         }

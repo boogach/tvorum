@@ -25,12 +25,13 @@ namespace WebApplicationTest.Controllers
                          {
                              ID = o.ID,
                              FerretName = o.FerretName,
-                             BirthDate = o.BirthDate
+                             BirthDate = o.BirthDate,
+                             Disease = o.Diseases.Where(x => x.FerretID == o.ID).Select(y => y.DiseaseName).ToList()
                          };
             return ferrets;
         }
 
-        [Route("ferrets/{diseaseName}/diseases")]
+        [Route("api/ferrets/{diseaseName}/disease")]
         public IEnumerable<FerretDTO> GetFerretsByDisease(string diseaseName)
         {
             var ferrets = from o in db.Ferrets
