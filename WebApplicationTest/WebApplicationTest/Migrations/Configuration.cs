@@ -15,7 +15,7 @@ namespace WebApplicationTest.Migrations
         protected override void Seed(WebApplicationTest.Models.ApplicationDbContext context)
         {
             context.Owners.AddOrUpdate(x => x.ID,
-            new Models.Owner() { ID = 1, FristName = "Zita", LastName = "Hazuroviæ", BirthDate = new DateTime(1989, 4, 4), PhoneNumber = "+385998135959", Email = "zita.hazurovic@gmail.com", City = "Našice", Address = "Ivana Mažuraniæa 22", PostCode = 31500 }
+            new Models.Owner() { ID = 1, FristName = "Test", LastName = "Test", BirthDate = new DateTime(1989, 5, 5), PhoneNumber = "+5325235235", Email = "test.test@gmail.com", City = "NaÅ¡ice", Address = "BraÄ‡e Radic 158", PostCode = 31500 }
             );
 
             context.Ferrets.AddOrUpdate(x => x.ID,
